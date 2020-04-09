@@ -43,6 +43,11 @@ public class MenuController : MonoBehaviour
         Application.Quit();
     }
 
+    public void settingsBack()
+    {
+        settingPanel.gameObject.SetActive(false);
+    }
+
     
     // Start is called before the first frame update
     void Start()
