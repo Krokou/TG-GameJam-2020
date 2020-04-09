@@ -25,6 +25,10 @@ public class KittenController : MonoBehaviour
     private float minYRot_F = 0;
     private float maxYRot_F = 360;
 
+    //Particles
+    public GameObject ParticleSpawner;
+    private GameObject DustSpawner_Part;
+
   
 
     // Start is called before the first frame update
@@ -87,4 +91,15 @@ public class KittenController : MonoBehaviour
        jumpRepeatRate_F = Random.Range(minJumpRepeatRate_F, maxJumpRepeatRate_F);
         //Debug.Log("jumpRepeatRate_F: " + jumpRepeatRate_F);
     }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(collision.gameObject.tag == "Floor")
+        {
+            DustSpawner_Part = Instantiate(ParticleSpawner , transform.position , ParticleSpawner.transform.rotation) as GameObject;
+            DustSpawner_Part.GetComponent<ParticleSystem>().Play();
+        }
+    }
 }
+
+

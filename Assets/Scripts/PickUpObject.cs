@@ -50,7 +50,6 @@ public class PickUpObject : MonoBehaviour
             RaycastHit hit;
             if (Physics.Raycast(ray, out hit))
             {
-                Debug.DrawLine(ray.origin, hit.point);
                 PickUpable p = hit.collider.GetComponent<PickUpable>();
                 if(p != null)
                 {
