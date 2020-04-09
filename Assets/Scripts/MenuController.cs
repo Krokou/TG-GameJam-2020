@@ -5,8 +5,10 @@ using UnityEngine.UI;
 
 public class MenuController : MonoBehaviour
 {
+    //fetches the setting_panel
     public GameObject settingPanel;
 
+    //Width and height for resolution scaling
     public int width;
     public int height;
 
@@ -25,6 +27,7 @@ public class MenuController : MonoBehaviour
         Screen.SetResolution(width, height, true);
     }
 
+    //Button functions
     public void startGame()
     {
         Application.LoadLevel(1);
@@ -35,6 +38,10 @@ public class MenuController : MonoBehaviour
         settingPanel.gameObject.SetActive(true);
     }
 
+    public void quitGame()
+    {
+        Application.Quit();
+    }
 
     
     // Start is called before the first frame update
