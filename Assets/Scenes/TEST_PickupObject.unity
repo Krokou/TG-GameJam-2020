@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.4465782, g: 0.49641252, b: 0.5748167, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -221,7 +221,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &276722115
 Transform:
   m_ObjectHideFlags: 0
@@ -831,6 +831,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: ArchicadLevel1
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 9f16b59a426f9734d871ee1415b8a38b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9f16b59a426f9734d871ee1415b8a38b, type: 3}
 --- !u!1 &985110429
@@ -849,7 +854,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!54 &985110430
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1031,6 +1036,75 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1435586734}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1564912554
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2217578107866311458, guid: d5126ef102aba9141bd5ce9bca1c9725,
+        type: 3}
+      propertyPath: m_Name
+      value: ArchicadLevel_Fixed
+      objectReference: {fileID: 0}
+    - target: {fileID: 2926550664296995121, guid: d5126ef102aba9141bd5ce9bca1c9725,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2926550664296995121, guid: d5126ef102aba9141bd5ce9bca1c9725,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2926550664296995121, guid: d5126ef102aba9141bd5ce9bca1c9725,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2926550664296995121, guid: d5126ef102aba9141bd5ce9bca1c9725,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 2926550664296995121, guid: d5126ef102aba9141bd5ce9bca1c9725,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2926550664296995121, guid: d5126ef102aba9141bd5ce9bca1c9725,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2926550664296995121, guid: d5126ef102aba9141bd5ce9bca1c9725,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 2926550664296995121, guid: d5126ef102aba9141bd5ce9bca1c9725,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2926550664296995121, guid: d5126ef102aba9141bd5ce9bca1c9725,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90.00001
+      objectReference: {fileID: 0}
+    - target: {fileID: 2926550664296995121, guid: d5126ef102aba9141bd5ce9bca1c9725,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2926550664296995121, guid: d5126ef102aba9141bd5ce9bca1c9725,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d5126ef102aba9141bd5ce9bca1c9725, type: 3}
 --- !u!1001 &1685952637
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1449,7 +1523,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!54 &2043325801
 Rigidbody:
   m_ObjectHideFlags: 0
