@@ -581,6 +581,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4e4a79de65664c4da306c0e5450f896, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ParticleSpawner: {fileID: 0}
 --- !u!54 &927643273
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1234,7 +1235,7 @@ GameObject:
   - component: {fileID: 1835253287}
   - component: {fileID: 1835253286}
   - component: {fileID: 1835253285}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: FarWall (1)
   m_TagString: Wall
   m_Icon: {fileID: 0}
