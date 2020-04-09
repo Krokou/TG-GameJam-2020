@@ -16,10 +16,10 @@ public class KittenController : MonoBehaviour
     private float yRot_F = 0;
     
     //Variables for randomizing.
-    private float minjJumpHeight_F = 1;
-    private float maxJumpHeight_F = 4;
-    private float minZVelocity_F = 1;
-    private float maxZVelocity_F = 8;
+    private float minjJumpHeight_F = 1f;
+    private float maxJumpHeight_F = 4f;
+    private float minZVelocity_F = 1f;
+    private float maxZVelocity_F = 8f;
     private float minJumpRepeatRate_F = 1;
     private float maxJumpRepeatRate_F = 4;
     private float minYRot_F = 0;
@@ -85,6 +85,6 @@ public class KittenController : MonoBehaviour
 
 
        jumpRepeatRate_F = Random.Range(minJumpRepeatRate_F, maxJumpRepeatRate_F);
-        Debug.Log("jumpRepeatRate_F: " + jumpRepeatRate_F);
+        //Debug.Log("jumpRepeatRate_F: " + jumpRepeatRate_F);
     }
 }
