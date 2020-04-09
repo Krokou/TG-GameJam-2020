@@ -33,6 +33,11 @@ public class MenuController : MonoBehaviour
         Application.LoadLevel(1);
     }
 
+    public void creditsScreen()
+    {
+        Application.LoadLevel(1);
+    }
+
     public void settingsMenu()
     {
         settingPanel.gameObject.SetActive(true);
