@@ -12,7 +12,7 @@ public class CameraController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        LockCursorAndMakeInvisible();
     }
 
     // Update is called once per frame
@@ -31,5 +31,12 @@ public class CameraController : MonoBehaviour
 
         transform.localRotation = Quaternion.Euler(mouseY_F, 0, 0);
         player_TF.rotation = Quaternion.Euler(0, mouseX_F, 0);
+    }
+
+    //Lock the cursor and make it invisible.
+    private void LockCursorAndMakeInvisible()
+    {
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 }
