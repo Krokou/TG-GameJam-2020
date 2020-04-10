@@ -91,7 +91,7 @@ public class PickUpObject : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.E))
         {
-            carriedObject.transform.parent.RotateAround(mainCamera.transform.position, mainCamera.transform.forward, 100 * Time.deltaTime);
+            carriedObject.transform.parent.RotateAround(mainCamera.transform.position, mainCamera.transform.forward, -100 * Time.deltaTime);
         }
     }
 }
