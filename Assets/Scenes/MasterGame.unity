@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028334, g: 0.2257134, b: 0.30692226, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2998,10 +2998,25 @@ PrefabInstance:
       propertyPath: victory_img
       value: 
       objectReference: {fileID: 1840146683}
+    - target: {fileID: 3469551758380161451, guid: 14c92741d2654ac49ba7072c1d8da663,
+        type: 3}
+      propertyPath: victoryImage_GO
+      value: 
+      objectReference: {fileID: 1840146683}
     - target: {fileID: 3469551758380161454, guid: 14c92741d2654ac49ba7072c1d8da663,
         type: 3}
       propertyPath: m_Name
       value: WinCircle
+      objectReference: {fileID: 0}
+    - target: {fileID: 3469551758380161460, guid: 14c92741d2654ac49ba7072c1d8da663,
+        type: 3}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3469551758380161460, guid: 14c92741d2654ac49ba7072c1d8da663,
+        type: 3}
+      propertyPath: m_CollisionDetection
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 14c92741d2654ac49ba7072c1d8da663, type: 3}
@@ -3909,6 +3924,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Kitten_Holder (0)
       objectReference: {fileID: 0}
+    - target: {fileID: 1980717556402489491, guid: f474494b37eac754397570bc367e07a3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3976026202141121303, guid: f474494b37eac754397570bc367e07a3,
         type: 3}
       propertyPath: audioClips.Array.size
@@ -3964,7 +3984,15 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 22987cb66a2b79a4894c125a10ed8162, type: 2}
-    m_RemovedComponents: []
+    - target: {fileID: 8579636094430214106, guid: f474494b37eac754397570bc367e07a3,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 1710937402513558598, guid: f474494b37eac754397570bc367e07a3, type: 3}
+    - {fileID: 1710937402513558593, guid: f474494b37eac754397570bc367e07a3, type: 3}
+    - {fileID: 1710937402513558592, guid: f474494b37eac754397570bc367e07a3, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: f474494b37eac754397570bc367e07a3, type: 3}
 --- !u!1001 &439711232749337007
 PrefabInstance:
