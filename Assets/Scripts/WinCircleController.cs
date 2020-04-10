@@ -8,9 +8,13 @@ public class WinCircleController : MonoBehaviour
     private int allKittensCount_Int;
     private bool countKitten_B = true;
 
+    public GameObject victoryImage_GO;
+
     //Count for kittens in circle area.
     private int count_Int = 0;
     public static bool cameraButtonPushed_B = false;
+    private bool victory_B = false;
+    private bool showVictoryImage_B = true;
 
     // Start is called before the first frame update
     void Start()
@@ -22,6 +26,7 @@ public class WinCircleController : MonoBehaviour
     void Update()
     {
         WinConditionChecker();
+        HideVictoryImageChecker();
     }
 
     private void CountAllKittens()
@@ -58,10 +63,29 @@ public class WinCircleController : MonoBehaviour
     //If all kittens inside circle and camera button pushed then win.
     private void WinConditionChecker()
     {
-        if(count_Int == allKittensCount_Int*2 && (cameraButtonPushed_B == true || Input.GetKey(KeyCode.T)))
+        if(count_Int == allKittensCount_Int*2 && Input.GetKey(KeyCode.T))
         {
-
-            Debug.Log("Win");
+            //Debug.Log("Win");
+            victory_B = true;
+            ShowVictoryImage();
         }            
     }
+
+    private void ShowVictoryImage()
+    {
+        if(victory_B == true && showVictoryImage_B == true)
+        {
+            victoryImage_GO.SetActive(true);
+        }        
+    }
+
+    private void HideVictoryImageChecker()
+    {
+        if(Input.GetKey(KeyCode.Escape))
+        {
+            showVictoryImage_B = false;
+            victoryImage_GO.SetActive(false);
+        }
+    }
+    
 }
