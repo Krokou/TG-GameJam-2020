@@ -39,6 +39,7 @@ public class MenuController : MonoBehaviour
 
     public void creditsScreen()
     {
+        Time.timeScale = 1f;
         Application.LoadLevel(2);
     }
 
