@@ -87,16 +87,7 @@ public class KittenController : MonoBehaviour
             myRigidBody_RGB.rotation = Quaternion.Euler(0, tempRot, 0);
             yRot_F = tempRot;
 
-            //Debug.Log("yRot_F: " + yRot_F);
-            /*
-            Vector3 direction_V3 = transform.position - GameObject.FindGameObjectWithTag("Player").transform.position;
-
-            Quaternion tempRot = Quaternion.LookRotation(direction_V3);
-            //Quaternion rot = transform.rotation;
-            yRot_F = tempRot.y;
-            
-            //transform.rotation = rot;
-            */
+            //Debug.Log("yRot_F: " + yRot_F);           
         }
         else
         {
@@ -116,7 +107,6 @@ public class KittenController : MonoBehaviour
         Vector3 newVel = Quaternion.AngleAxis(yRot_F, Vector3.up) * vel;
 
         //Debug.Log("newVel: " + newVel);
-
 
         myRigidBody_RGB.velocity = newVel;
 

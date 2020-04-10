@@ -15,7 +15,7 @@ public class PickUpObject : MonoBehaviour
         mainCamera = Camera.main;
     }
 
-    void Update()
+    void FixedUpdate()
     {
         if (carrying)
         {
