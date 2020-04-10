@@ -29,12 +29,17 @@ public class KittenController : MonoBehaviour
     public GameObject ParticleSpawner;
     private GameObject DustSpawner_Part;
 
+    private Transform player_TF;
+
+    private bool isGrounded_B = false;
+
   
 
     // Start is called before the first frame update
     void Start()
     {
         myRigidBody_RGB = GetComponent<Rigidbody>();
+        player_TF = GameObject.FindGameObjectWithTag("Player").transform;
 
         //Jump after 1 second and then repeat the rate randomly.
         //InvokeRepeating("KittenJumpUpdate",1, jumpRepeatRate_F);
@@ -54,7 +59,11 @@ public class KittenController : MonoBehaviour
         {
 
             yield return new WaitForSeconds(jumpRepeatRate_F);
-            KittenJumpUpdate();
+            if(isGrounded_B == true)
+            {
+                KittenJumpUpdate();
+            }
+           
 
         }
     }
@@ -86,9 +95,9 @@ public class KittenController : MonoBehaviour
 
         myRigidBody_RGB.velocity = newVel;
 
+        isGrounded_B = false;
 
-
-       jumpRepeatRate_F = Random.Range(minJumpRepeatRate_F, maxJumpRepeatRate_F);
+        jumpRepeatRate_F = Random.Range(minJumpRepeatRate_F, maxJumpRepeatRate_F);
         //Debug.Log("jumpRepeatRate_F: " + jumpRepeatRate_F);
     }
 
@@ -96,9 +105,16 @@ public class KittenController : MonoBehaviour
     {
         if(collision.gameObject.tag == "Floor")
         {
+            isGrounded_B = true;
+
             DustSpawner_Part = Instantiate(ParticleSpawner , transform.position , ParticleSpawner.transform.rotation) as GameObject;
             DustSpawner_Part.GetComponent<ParticleSystem>().Play();
         }
+    }
+
+    private void JumpAwayFromPlayer()
+    {
+
     }
 }
 
