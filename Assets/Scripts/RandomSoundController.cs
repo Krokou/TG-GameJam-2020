@@ -34,7 +34,7 @@ public class RandomSoundController : MonoBehaviour
 
     private void playRandomSound()
     {
-        print(audioClips.Count);
+        //print(audioClips.Count);
         if (audioClips.Count != 0 && audioSource != null)
         {
             int index = Mathf.CeilToInt(Random.Range(0.0001f, audioClips.Count) - 1);

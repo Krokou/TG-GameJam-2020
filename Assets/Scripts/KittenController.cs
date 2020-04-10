@@ -78,16 +78,16 @@ public class KittenController : MonoBehaviour
 
         if (Vector3.Distance(transform.position, player_TF.position) < 5)
         {
-            Debug.Log("Too close!");
+            //Debug.Log("Too close!");
 
             float tempRot = player_TF.rotation.eulerAngles.y;
 
-            Debug.Log("tempRot: " + tempRot);
+            //Debug.Log("tempRot: " + tempRot);
 
             myRigidBody_RGB.rotation = Quaternion.Euler(0, tempRot, 0);
             yRot_F = tempRot;
 
-            Debug.Log("yRot_F: " + yRot_F);
+            //Debug.Log("yRot_F: " + yRot_F);
             /*
             Vector3 direction_V3 = transform.position - GameObject.FindGameObjectWithTag("Player").transform.position;
 
@@ -101,7 +101,7 @@ public class KittenController : MonoBehaviour
         else
         {
             yRot_F = Random.Range(minYRot_F, maxYRot_F);
-            Debug.Log("yRot_F: " + yRot_F);
+            //Debug.Log("yRot_F: " + yRot_F);
             myRigidBody_RGB.rotation = Quaternion.Euler(0, yRot_F, 0);
         }
 
@@ -141,7 +141,7 @@ public class KittenController : MonoBehaviour
     {
         if(Vector3.Distance(transform.position, player_TF.position) < 5)
         {
-            Debug.Log("Too close!");
+            //Debug.Log("Too close!");
             Vector3 direction_V3 = transform.position - player_TF.position;
 
             Quaternion temprRot = Quaternion.LookRotation(direction_V3);
