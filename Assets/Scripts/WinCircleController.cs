@@ -54,7 +54,7 @@ public class WinCircleController : MonoBehaviour
     //If all kittens inside circle and camera button pushed then win.
     private void WinConditionChecker()
     {
-        if(count_Int == allKittensCount_Int && cameraButtonPushed_B == true)
+        if(count_Int == allKittensCount_Int && (cameraButtonPushed_B == true || Input.GetKey(KeyCode.T)))
         {
 
             Debug.Log("Win");
