@@ -20,6 +20,8 @@ public class PickUpObject : MonoBehaviour
         if (carrying)
         {
             carry(carriedObject);
+            CheckRotateYAxis();
+            CheckRotateZAxis();
             checkDrop();
         }
         else
@@ -75,5 +77,21 @@ public class PickUpObject : MonoBehaviour
         carriedObject = null;
     }
 
-    
+    //Rotate picked up object on y-axis.
+    private void CheckRotateYAxis()
+    {
+        if(Input.GetKey(KeyCode.Q))
+        {
+            carriedObject.transform.parent.Rotate(0, 50 * Time.deltaTime, 0, Space.World);
+        }        
+    }
+
+    //Rotate picked up object on z-axis.
+    private void CheckRotateZAxis()
+    {
+        if (Input.GetKey(KeyCode.E))
+        {
+            carriedObject.transform.parent.RotateAround(mainCamera.transform.position, mainCamera.transform.forward, 50 * Time.deltaTime);
+        }
+    }
 }
