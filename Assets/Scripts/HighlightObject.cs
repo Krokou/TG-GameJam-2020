@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+
 
 public class HighlightObject : MonoBehaviour
 {
@@ -8,6 +10,12 @@ public class HighlightObject : MonoBehaviour
     // the object has this script on it and a collider. Collider can also be trigger.
     private Color originalColor_C;
     private Renderer curRenderer_R;
+
+
+    public GameObject rotationIcon_E;
+    public GameObject rotationIcon_R;
+
+
 
     private void Start()
     {
@@ -24,11 +32,17 @@ public class HighlightObject : MonoBehaviour
         originalColor_C = curRenderer_R.material.color;
         //Change material color to what ever looks best.
         curRenderer_R.material.color = Color.yellow;
+
+        rotationIcon_E.gameObject.SetActive(true);
+        rotationIcon_R.gameObject.SetActive(true);
+       
     }
 
     private void OnMouseExit()
     {
         //Change color of matierial back to the original color/texture.
         curRenderer_R.material.color = originalColor_C;
+        rotationIcon_E.gameObject.SetActive(false);
+        rotationIcon_R.gameObject.SetActive(false);
     }
 }

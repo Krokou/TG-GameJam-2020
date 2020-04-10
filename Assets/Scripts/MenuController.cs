@@ -31,11 +31,12 @@ public class MenuController : MonoBehaviour
     public void startGame()
     {
         Application.LoadLevel(1);
+        Time.timeScale = 1f;
     }
 
     public void creditsScreen()
     {
-        Application.LoadLevel(1);
+        Application.LoadLevel(2);
     }
 
     public void settingsMenu()
