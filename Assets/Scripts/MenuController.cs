@@ -7,6 +7,9 @@ public class MenuController : MonoBehaviour
 {
     //fetches the setting_panel
     public GameObject settingPanel;
+    public GameObject TutorialPanel;
+
+    private bool TutorialPanel_bool = false;
 
     //Width and height for resolution scaling
     public int width;
@@ -30,12 +33,14 @@ public class MenuController : MonoBehaviour
     //Button functions
     public void startGame()
     {
-        Application.LoadLevel(1);
+        TutorialPanel.gameObject.SetActive(true);
+        TutorialPanel_bool = true;
     }
 
     public void creditsScreen()
     {
-        Application.LoadLevel(1);
+        Time.timeScale = 1f;
+        Application.LoadLevel(2);
     }
 
     public void settingsMenu()
@@ -63,6 +68,13 @@ public class MenuController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(TutorialPanel_bool == true)
+        {
+            if (Input.GetKey(KeyCode.Mouse0))
+            {
+                Application.LoadLevel(1);
+                Time.timeScale = 1f;
+            }
+        }
     }
 }

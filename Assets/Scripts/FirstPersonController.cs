@@ -8,6 +8,15 @@ public class FirstPersonController : MonoBehaviour
 
     private float horizontal_F, vertical_F;
     private Vector3 playerMovement_V3;
+    //private bool canMove = false;
+
+    private void Awake()
+    {
+        //GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePosition;
+        
+       // StartCoroutine(FreezeDelay());
+
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -18,8 +27,10 @@ public class FirstPersonController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        PlayerMovementUpdate();
-        
+      //  if(canMove == true)
+        //{
+            PlayerMovementUpdate();
+        //}
     }
 
     //Movement for the player.
@@ -31,4 +42,13 @@ public class FirstPersonController : MonoBehaviour
         playerMovement_V3 = new Vector3(horizontal_F, 0, vertical_F) * speed_F * Time.deltaTime;
         transform.Translate(playerMovement_V3, Space.Self);
     }
+
+    /*
+    private IEnumerator FreezeDelay()
+    {
+        yield return new WaitForSeconds(0.1f);
+        GetComponent<Rigidbody>().constraints &= RigidbodyConstraints.FreezePosition;
+        canMove = true;
+    }
+    */
 }
