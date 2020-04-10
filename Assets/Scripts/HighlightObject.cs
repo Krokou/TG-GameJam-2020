@@ -13,10 +13,13 @@ public class HighlightObject : MonoBehaviour
     {
         //Grab the current renderer on the object at start.
         curRenderer_R = GetComponent<Renderer>();
+
+        //Debug.Log("curRenderer_R: " + curRenderer_R.gameObject.name);
     }
 
     private void OnMouseEnter()
     {
+        //Debug.Log("mouse over");
         //Store original color/texture to use when mouse stops hovering over the object.
         originalColor_C = curRenderer_R.material.color;
         //Change material color to what ever looks best.
