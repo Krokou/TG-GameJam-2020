@@ -31,7 +31,7 @@ public class KittenController : MonoBehaviour
 
     private Transform player_TF;
 
-    private bool isGrounded_B = false;
+    //private bool isGrounded_B = false;
 
   
 
@@ -50,21 +50,16 @@ public class KittenController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        //JumpAwayFromPlayer();
     }
 
     private IEnumerator RepeatJump()
     {
         while (true)
         {
-
-            yield return new WaitForSeconds(jumpRepeatRate_F);
-            if(isGrounded_B == true)
-            {
-                KittenJumpUpdate();
-            }
+            yield return new WaitForSeconds(jumpRepeatRate_F);            
+            KittenJumpUpdate();      
            
-
         }
     }
 
@@ -80,9 +75,39 @@ public class KittenController : MonoBehaviour
 
         jumpHeight_F = Random.Range(minjJumpHeight_F, maxJumpHeight_F);
         zVelocity_F = Random.Range(minZVelocity_F, maxZVelocity_F);
-        yRot_F = Random.Range(minYRot_F, maxYRot_F);
+
+        if (Vector3.Distance(transform.position, player_TF.position) < 5)
+        {
+            Debug.Log("Too close!");
+
+            float tempRot = player_TF.rotation.eulerAngles.y;
+
+            Debug.Log("tempRot: " + tempRot);
+
+            myRigidBody_RGB.rotation = Quaternion.Euler(0, tempRot, 0);
+            yRot_F = tempRot;
+
+            Debug.Log("yRot_F: " + yRot_F);
+            /*
+            Vector3 direction_V3 = transform.position - GameObject.FindGameObjectWithTag("Player").transform.position;
+
+            Quaternion tempRot = Quaternion.LookRotation(direction_V3);
+            //Quaternion rot = transform.rotation;
+            yRot_F = tempRot.y;
+            
+            //transform.rotation = rot;
+            */
+        }
+        else
+        {
+            yRot_F = Random.Range(minYRot_F, maxYRot_F);
+            Debug.Log("yRot_F: " + yRot_F);
+            myRigidBody_RGB.rotation = Quaternion.Euler(0, yRot_F, 0);
+        }
+
+        
       
-        myRigidBody_RGB.rotation = Quaternion.Euler(0, yRot_F, 0);
+        
 
         Vector3 vel = new Vector3(0, jumpHeight_F, zVelocity_F);
         //Debug.Log("vel: " + vel);
@@ -95,7 +120,7 @@ public class KittenController : MonoBehaviour
 
         myRigidBody_RGB.velocity = newVel;
 
-        isGrounded_B = false;
+        //isGrounded_B = false;
 
         jumpRepeatRate_F = Random.Range(minJumpRepeatRate_F, maxJumpRepeatRate_F);
         //Debug.Log("jumpRepeatRate_F: " + jumpRepeatRate_F);
@@ -105,7 +130,7 @@ public class KittenController : MonoBehaviour
     {
         if(collision.gameObject.tag == "Floor")
         {
-            isGrounded_B = true;
+            //isGrounded_B = true;
 
             DustSpawner_Part = Instantiate(ParticleSpawner , transform.position , ParticleSpawner.transform.rotation) as GameObject;
             DustSpawner_Part.GetComponent<ParticleSystem>().Play();
@@ -114,7 +139,17 @@ public class KittenController : MonoBehaviour
 
     private void JumpAwayFromPlayer()
     {
+        if(Vector3.Distance(transform.position, player_TF.position) < 5)
+        {
+            Debug.Log("Too close!");
+            Vector3 direction_V3 = transform.position - player_TF.position;
 
+            Quaternion temprRot = Quaternion.LookRotation(direction_V3);
+            Quaternion rot = transform.rotation;
+            rot.y = temprRot.y;
+            transform.rotation = rot;
+        }
+       
     }
 }
 
