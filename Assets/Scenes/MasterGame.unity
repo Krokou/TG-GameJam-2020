@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028334, g: 0.2257134, b: 0.30692226, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -319,7 +319,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &351090473
 Transform:
   m_ObjectHideFlags: 0
@@ -350,7 +350,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &359259188
 Transform:
   m_ObjectHideFlags: 0
@@ -358,8 +358,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 359259187}
-  m_LocalRotation: {x: -0, y: 0.7071066, z: -0, w: 0.70710707}
-  m_LocalPosition: {x: -10.83, y: 3.02, z: -8.01}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -11, y: 3.02, z: -8.01}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1116,8 +1116,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6cb7b530661745d4989eac9585306af3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player_Pref: {fileID: 6829479082565758768, guid: fe4241ef71b52f141902ceda3ea45894,
-    type: 3}
+  player_Pref: {fileID: 1637935065}
   spawnPos_TF: {fileID: 359259188}
 --- !u!1 &1147290641 stripped
 GameObject:
@@ -2029,6 +2028,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 14c92741d2654ac49ba7072c1d8da663, type: 3}
+--- !u!1 &1637935065 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6829479082565758768, guid: fe4241ef71b52f141902ceda3ea45894,
+    type: 3}
+  m_PrefabInstance: {fileID: 1988348212}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1840146683
 GameObject:
   m_ObjectHideFlags: 0
@@ -2130,12 +2135,12 @@ PrefabInstance:
     - target: {fileID: 6829479082565758772, guid: fe4241ef71b52f141902ceda3ea45894,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -8.027
+      value: -11.99
       objectReference: {fileID: 0}
     - target: {fileID: 6829479082565758772, guid: fe4241ef71b52f141902ceda3ea45894,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.337
+      value: 3.82
       objectReference: {fileID: 0}
     - target: {fileID: 6829479082565758772, guid: fe4241ef71b52f141902ceda3ea45894,
         type: 3}
