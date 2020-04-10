@@ -7,6 +7,7 @@ public class WinCircleController : MonoBehaviour
     private GameObject[] kittensArray_A;
     private int allKittensCount_Int;
 
+
     //Count for kittens in circle area.
     private int count_Int = 0;
     public static bool cameraButtonPushed_B = false;
@@ -36,7 +37,7 @@ public class WinCircleController : MonoBehaviour
         if(other.tag == "kitten_Tag")
         {
             count_Int += 1;
-            //Debug.Log("kitten here, count: " + count_Int);
+            Debug.Log("kitten here, count: " + count_Int);
         }
     }
 
@@ -46,7 +47,7 @@ public class WinCircleController : MonoBehaviour
         if (other.tag == "kitten_Tag")
         {
             count_Int -= 1;
-            //Debug.Log("kitten here, count: " + count_Int);
+            Debug.Log("kitten here, count: " + count_Int);
         }
     }
 
