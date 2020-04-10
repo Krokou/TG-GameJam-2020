@@ -8,6 +8,9 @@ public class HightlightFromCamera : MonoBehaviour
     Material originalMaterial;
     GameObject lastHighlightedObject;
 
+    public GameObject rotationIcon_E;
+    public GameObject rotationIcon_R;
+
     void HighlightObject(GameObject gameObject)
     {
         if (lastHighlightedObject != gameObject)
@@ -43,9 +46,13 @@ public class HightlightFromCamera : MonoBehaviour
             if(hitObject.GetComponent<MeshRenderer>() != null && hitObject.GetComponent<PickUpable>() != null)
             {
                 HighlightObject(hitObject);
+                rotationIcon_E.gameObject.SetActive(true);
+                rotationIcon_R.gameObject.SetActive(true);
             }
             else
             {
+                rotationIcon_E.gameObject.SetActive(false);
+                rotationIcon_R.gameObject.SetActive(false);
                 return;
             }
 
