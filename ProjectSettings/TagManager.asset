@@ -7,6 +7,8 @@ TagManager:
   - kitten_Tag
   - cameraButton_Tag
   - Floor
+  - Wall
+  - Furniture
   layers:
   - Default
   - TransparentFX
