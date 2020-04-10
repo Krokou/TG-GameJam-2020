@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.18028334, g: 0.2257134, b: 0.30692226, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1373,6 +1373,11 @@ PrefabInstance:
       propertyPath: m_DrawHalo
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 57791933806997860, guid: d5126ef102aba9141bd5ce9bca1c9725,
+        type: 3}
+      propertyPath: m_Lightmapping
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 166729308583235494, guid: d5126ef102aba9141bd5ce9bca1c9725,
         type: 3}
       propertyPath: m_Intensity
@@ -1387,6 +1392,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Shadows.m_Strength
       value: 0.461
+      objectReference: {fileID: 0}
+    - target: {fileID: 166729308583235494, guid: d5126ef102aba9141bd5ce9bca1c9725,
+        type: 3}
+      propertyPath: m_Lightmapping
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 166729308583235494, guid: d5126ef102aba9141bd5ce9bca1c9725,
+        type: 3}
+      propertyPath: m_DrawHalo
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2217578107866311458, guid: d5126ef102aba9141bd5ce9bca1c9725,
         type: 3}
@@ -1561,7 +1576,7 @@ PrefabInstance:
     - target: {fileID: 8892490976443696566, guid: d5126ef102aba9141bd5ce9bca1c9725,
         type: 3}
       propertyPath: m_Intensity
-      value: 0.67
+      value: 0.71
       objectReference: {fileID: 0}
     - target: {fileID: 8892490976443696566, guid: d5126ef102aba9141bd5ce9bca1c9725,
         type: 3}
@@ -1572,6 +1587,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Shadows.m_Strength
       value: 0.524
+      objectReference: {fileID: 0}
+    - target: {fileID: 8892490976443696566, guid: d5126ef102aba9141bd5ce9bca1c9725,
+        type: 3}
+      propertyPath: m_Lightmapping
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8892490976443696566, guid: d5126ef102aba9141bd5ce9bca1c9725,
+        type: 3}
+      propertyPath: m_DrawHalo
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9034204820812681653, guid: d5126ef102aba9141bd5ce9bca1c9725,
         type: 3}
@@ -1587,6 +1612,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Shadows.m_Strength
       value: 0.53
+      objectReference: {fileID: 0}
+    - target: {fileID: 9034204820812681653, guid: d5126ef102aba9141bd5ce9bca1c9725,
+        type: 3}
+      propertyPath: m_DrawHalo
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d5126ef102aba9141bd5ce9bca1c9725, type: 3}
